@@ -1,0 +1,17 @@
+sonarqube:
+  image: sonarqube:5.1
+  links:
+    - db
+  ports:
+   - "9000:9000"
+  environment:
+   - SONARQUBE_JDBC_URL=jdbc:postgresql://db/sonar
+   - SONARQUBE_JDBC_USERNAME=sonar
+   - SONARQUBE_JDBC_PASSWORD=exemplo
+db:
+  image: postgres:9.4
+  ports:
+   - "5432:5432"
+  environment:
+   - POSTGRES_USER=sonar
+   - POSTGRES_PASSWORD=exemplo
