@@ -10,8 +10,6 @@ sonarqube:
    - SONARQUBE_JDBC_PASSWORD=exemplo
 db:
   image: postgres:9.4
-  ports:
-   - "5432:5432"
   environment:
    - POSTGRES_USER=sonar
    - POSTGRES_PASSWORD=exemplo
