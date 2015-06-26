@@ -1,10 +1,9 @@
-FROM ubuntu:latest
+FROM ubuntu:14.04
 
-RUN apt-get update && apt-get install -y \
-  cowsay \
-  figlet
+RUN mkdir -p /data
 
 ADD entrypoint.sh /
+ADD config-example.xml /data/
 
 RUN ["chmod", "+x", "/entrypoint.sh"]
 
