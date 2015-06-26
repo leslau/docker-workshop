@@ -1,1 +1,1 @@
-# docker-workshop
+# Compose example
